@@ -1,185 +1,258 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZAIREXIT48 - Cyber Forest Adventure</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montaga&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Questrial&family=Roboto:wght@400;500;900&family=Sen:wght@400..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&family=Montaga&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Questrial&family=Roboto:wght@400;500;900&family=Sen:wght@400..800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montaga&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Questrial&family=Roboto:wght@400;500;900&family=Sen:wght@400..800&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&family=Montaga&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Questrial&family=Roboto:wght@400;500;900&family=Sen:wght@400..800&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="cyber-nav" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">ZAIRZEST <span class="logo-version" style="color: #38ccff; font-family: 'Mohave', sans-serif;;">4.0</span></span>
-            </div>
-            
-            <div class="nav-links" id="navLinks">
-                <a href="#home" class="nav-link active" data-section="home">Home</a>
-                <a href="#about" class="nav-link" data-section="about">About Us</a>
-                <a href="#events" class="nav-link" data-section="events">Events</a>
-                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-            </div>
-
-            <div class="nav-actions">
-                <button class="nav-btn secondary">Sign In</button>
-                <button class="nav-btn primary">Register Now</button>
-            </div>
-
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text"
+            >ZAIRZEST
+            <span
+              class="logo-version"
+              style="color: #38ccff; font-family: 'Mohave', sans-serif"
+              >4.0</span
+            ></span
+          >
         </div>
+
+       <div class="nav-links" id="navLinks">
+    <a href="./about-us.html" class="hover-link">About us</a>
+    <a href="./register.html" class="hover-link">Register</a>
+    <a href="./sign_in.html" class="hover-link">Sign in</a>
+</div>
+        
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle onclick="alert('Clicked!')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-background">
-            <div class="cyber-overlay"></div>
-            <div class="particles"></div>
-        </div>
-        
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    Hunt the Future in the<br>
-                    <span class="gradient-text">Cyber Forest</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Experience the next generation of digital adventures
-                </p>
-                <button class="cta-button" id="ctaButton">
-                    <span>Start Your Journey</span>
-                    <div class="button-glow"></div>
-                </button>
-            </div>
-        </div>
+      <div class="hero-background">
+        <div class="cyber-overlay"></div>
+        <div class="particles"></div>
+      </div>
 
-        <div class="scroll-indicator" id="scrollIndicator">
-            <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 13l3 3 7-7"/>
-                <path d="M12 17V3"/>
-            </svg>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Hunt the Future in the<br />
+            <span class="gradient-text">Cyber Forest</span>
+          </h1>
+          <p class="hero-subtitle">
+            Experience the next generation of digital adventures
+          </p>
+          <button class="cta-button" id="ctaButton">
+            <span>Start Your Journey</span>
+            <div class="button-glow"></div>
+          </button>
         </div>
+      </div>
+
+      <div class="scroll-indicator" id="scrollIndicator">
+        <svg
+          class="scroll-arrow"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M7 13l3 3 7-7" />
+          <path d="M12 17V3" />
+        </svg>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="character-container">
-                        <div class="character-glow"></div>
-                        <div class="character-frame">
-                            <div class="character-avatar"></div>
-                            <div class="character-effects"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-text">
-                    <h2 class="section-title">
-                        Zen 4.0: Your Guide in<br>
-                        The Cyber Wild.
-                    </h2>
-                    <p class="section-description">
-                        In a world where technology meets nature, Zen 4.0 emerges as the ultimate companion for digital explorers. Navigate through virtual landscapes, discover hidden technologies, and unlock the secrets of the cyber forest.
-                    </p>
-                    <p class="section-description">
-                        Our advanced AI guide adapts to your journey, providing personalized experiences that blur the line between reality and digital dreams. Every path leads to new discoveries, every choice shapes your adventure.
-                    </p>
-                    <button class="learn-more-btn">
-                        Learn More About Zen 4.0
-                    </button>
-                </div>
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <div class="character-container">
+              <div class="character-glow"></div>
+              <div class="character-frame">
+                <div class="character-avatar"></div>
+                <div class="character-effects"></div>
+              </div>
             </div>
+          </div>
+
+          <div class="about-text">
+            <h2 class="section-title">
+              Zen 4.0: Your Guide in<br />
+              The Cyber Wild.
+            </h2>
+            <p class="section-description">
+              In a world where technology meets nature, Zen 4.0 emerges as the
+              ultimate companion for digital explorers. Navigate through virtual
+              landscapes, discover hidden technologies, and unlock the secrets
+              of the cyber forest.
+            </p>
+            <p class="section-description">
+              Our advanced AI guide adapts to your journey, providing
+              personalized experiences that blur the line between reality and
+              digital dreams. Every path leads to new discoveries, every choice
+              shapes your adventure.
+            </p>
+            <button class="learn-more-btn">Learn More About Zen 4.0</button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Events Section -->
     <section id="events" class="events-section">
-        <div class="container">
-            <div class="events-header">
-                <h2 class="section-title center">Events for you</h2>
-                <p class="section-subtitle">Discover amazing experiences tailored to your interests</p>
-            </div>
-            
-            <div class="events-grid">
-                <div class="event-card tech" data-card="tech">
-                    <div class="event-image tech-bg">
-                        <div class="event-overlay"></div>
-                        <div class="event-icon">🔧</div>
-                    </div>
-                    <div class="event-content">
-                        <h3 class="event-title">Tech Events</h3>
-                        <p class="event-description">Cutting-edge technology showcases and innovation workshops</p>
-                        <button class="event-btn">Explore Tech</button>
-                    </div>
-                </div>
-                
-                <div class="event-card fun" data-card="fun">
-                    <div class="event-image fun-bg">
-                        <div class="event-overlay"></div>
-                        <div class="event-icon">🎉</div>
-                    </div>
-                    <div class="event-content">
-                        <h3 class="event-title">Fun Events</h3>
-                        <p class="event-description">Entertainment and community gatherings for digital adventurers</p>
-                        <button class="event-btn">Join the Fun</button>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="events-header">
+          <h2 class="section-title center">Events for you</h2>
+          <p class="section-subtitle">
+            Discover amazing experiences tailored to your interests
+          </p>
         </div>
+
+        <div class="events-grid">
+          <div class="event-card tech" data-card="tech">
+            <div class="event-image tech-bg">
+              <div class="event-overlay"></div>
+              <div class="event-icon">🔧</div>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Tech Events</h3>
+              <p class="event-description">
+                Cutting-edge technology showcases and innovation workshops
+              </p>
+              <button class="event-btn">Explore Tech</button>
+            </div>
+          </div>
+
+          <div class="event-card fun" data-card="fun">
+            <div class="event-image fun-bg">
+              <div class="event-overlay"></div>
+              <div class="event-icon">🎉</div>
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Fun Events</h3>
+              <p class="event-description">
+                Entertainment and community gatherings for digital adventurers
+              </p>
+              <button class="event-btn">Join the Fun</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer id="contact" class="footer-section">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3 class="footer-title">Want to Know<br>about us ?</h3>
-                    <p class="footer-description">
-                        Join our community of digital explorers and experience a new kind of adventure where technology meets imagination.
-                    </p>
-                    <div class="footer-details">
-                        <p>📧 hello@zairexit48.com</p>
-                        <p>📱 +1 (555) 123-4567</p>
-                    </div>
-                </div>
-                
-                <div class="footer-social">
-                    <div class="social-links">
-                        <a href="#" class="social-link facebook" aria-label="Facebook">
-                            <span>f</span>
-                        </a>
-                        <a href="#" class="social-link twitter" aria-label="Twitter">
-                            <span>t</span>
-                        </a>
-                        <a href="#" class="social-link instagram" aria-label="Instagram">
-                            <span>ig</span>
-                        </a>
-                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
-                            <span>in</span>
-                        </a>
-                    </div>
-                    <p class="copyright">Copyright 2024</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3 class="footer-title">Want to Know<br />about us ?</h3>
+            <p class="footer-description">
+              Join our community of digital explorers and experience a new kind
+              of adventure where technology meets imagination.
+            </p>
+            <div class="footer-details">
+              <p>📧 hello@zairexit48.com</p>
+              <p>📱 +1 (555) 123-4567</p>
             </div>
+          </div>
+
+          <div class="footer-social">
+            <div class="social-links">
+              <a href="#" class="social-link facebook" aria-label="Facebook">
+                <span>f</span>
+              </a>
+              <a href="#" class="social-link twitter" aria-label="Twitter">
+                <span>t</span>
+              </a>
+              <a href="#" class="social-link instagram" aria-label="Instagram">
+                <span>ig</span>
+              </a>
+              <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                <span>in</span>
+              </a>
+            </div>
+            <p class="copyright">Copyright 2024</p>
+          </div>
         </div>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script src="script.js">
+ document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded');
+    
+    // Get elements
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    console.log('Toggle element:', mobileMenuToggle);
+    console.log('Nav links element:', navLinks);
+    
+    if (!mobileMenuToggle || !navLinks) {
+        console.error('Elements not found!');
+        return;
+    }
+    
+    // Toggle mobile menu
+    mobileMenuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Hamburger clicked');
+        
+        // Toggle classes
+        mobileMenuToggle.classList.toggle('active');
+        navLinks.classList.toggle('mobile-open');
+        
+        console.log('Active class:', mobileMenuToggle.classList.contains('active'));
+        console.log('Mobile-open class:', navLinks.classList.contains('mobile-open'));
+    });
+    
+    // Close menu when clicking on links
+    navLinks.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            console.log('Link clicked, closing menu');
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-open');
+        }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-open');
+        }
+    });
+});
+    </script>
+  </body>
 </html>
