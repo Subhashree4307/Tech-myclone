@@ -88,7 +88,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  margin-right: 3rem;
+  margin-right: 0rem;
   margin-left: 6rem;
   gap: 3rem;
   padding: 32px;
