@@ -538,17 +538,6 @@ section {
   .events-grid {
     grid-template-columns: 1fr;
   }
-
-  .character-glow,
-  .character-frame {
-    width: 200px;
-    height: 200px;
-  }
-
-  .character-avatar {
-    width: 150px;
-    height: 150px;
-  }
   .container {
     flex-direction: column;
     text-align: center;

@@ -23,6 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&family=Montaga&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Questrial&family=Roboto:wght@400;500;900&family=Sen:wght@400..800&family=Tangerine:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <!-- Navigation -->
@@ -40,9 +41,9 @@
         </div>
 
         <div class="nav-links" id="navLinks">
-          <a href="./about-us.html" class="hover-link">About us</a>
-          <a href="./register.html" class="hover-link">Register</a>
-          <a href="./sign_in.html" class="hover-link">Sign in</a>
+          <a href="pages/about-us.html" class="hover-link">About us</a>
+          <a href="pages/register.html" class="hover-link">Register</a>
+          <a href="pages/sign_in.html" class="hover-link">Sign in</a>
         </div>
 
         <div class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -62,7 +63,7 @@
       </div>
 
       <div class="hero-content">
-        <div class="hero-text">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
           <h1 class="hero-title">
             Hunt the Future in the<br />
             <span class="gradient-text">Cyber Forest</span>
@@ -90,7 +91,8 @@
 
     <!-- about section starting -->
     <section>
-      <div class="container">
+      <div class="bottom-blur"></div>
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
         <div class="left-side">
           <div class="image-container">
             <img
@@ -132,7 +134,7 @@
           </p>
         </div>
         <div class="events-grid">
-          <div class="event-card">
+          <div class="event-card" data-aos="flip-left" data-aos-duration="1000">
             <img
               src="https://zairzest.zairza.co.in/static/media/tech-events.8e242174caa90e02ff7b.webp"
               alt="Tech Events"
@@ -144,7 +146,7 @@
             </div>
           </div>
 
-          <div class="event-card">
+          <div class="event-card" data-aos="flip-right" data-aos-duration="1000">
             <img
               src="https://zairzest.zairza.co.in/static/media/fun-events.c714ccb7842c6927e7c4.webp"
               alt="Fun Events"
@@ -198,7 +200,10 @@
       </div>
     </footer>
     <!-- footer ending  -->
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

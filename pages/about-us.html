@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: #111111;
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation */
+.cyber-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: black;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  transition: var(--transition);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-text {
+  font-family: "Sen", sans-serif;
+  font-size: 40px;
+  margin-left: 21px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: white;
+}
+@media screen and (min-width: 1440px) {
+  .nav-container {
+    margin-left: 20px;
+    margin-right: auto;
+  }
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-right: 0rem;
+  margin-left: 6rem;
+  gap: 3rem;
+  padding: 32px;
+}
+.nav-toggle {
+  display: none;
+}
+.nav-links a:hover {
+  color: #38ccff;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: var(--transition);
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+
+    top: 70px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .nav-container,
+  .hero-content,
+  .container {
+    padding: 0 16px;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .nav-container {
+    height: 70px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+}
+.nav-links.mobile-open {
+  display: flex;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  padding: 40px 20px;
+  gap: 24px;
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+  z-index: 1000;
+  margin-right: 0;
+}
+.nav-links.mobile-open > div {
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.nav-links.mobile-open > div:last-child {
+  border-bottom: none;
+}
+
+.nav-links.mobile-open a {
+  color: white !important;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+    </style>
+</head>
+<body>
+     <nav class="cyber-nav" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text"
+            >ZAIRZEST
+            <span
+              class="logo-version"
+              style="color: #38ccff; font-family: 'Mohave', sans-serif"
+              >4.0</span
+            ></span
+          >
+        </div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="about-us.html" class="hover-link">About us</a>
+          <a href="pages/register.html" class="hover-link">Register</a>
+          <a href="pages/sign_in.html" class="hover-link">Sign in</a>
+        </div>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded');
+
+    // Get elements
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    console.log('Toggle element:', mobileMenuToggle);
+    console.log('Nav links element:', navLinks);
+
+    if (!mobileMenuToggle || !navLinks) {
+        console.error('Elements not found!');
+        return;
+    }
+
+    // Toggle mobile menu
+    mobileMenuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Hamburger clicked');
+
+        // Toggle classes
+        mobileMenuToggle.classList.toggle('active');
+        navLinks.classList.toggle('mobile-open');
+
+        console.log('Active class:', mobileMenuToggle.classList.contains('active'));
+        console.log('Mobile-open class:', navLinks.classList.contains('mobile-open'));
+    });
+
+    // Close menu when clicking on links
+    navLinks.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            console.log('Link clicked, closing menu');
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-open');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-open');
+        }
+    });
+});
+</script>
+</body>
+</html>
