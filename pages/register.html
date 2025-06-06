@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Register</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+      }
+      .regis_containt {
+        display: flex;
+      }
+      .regis_left {
+        background-image: url("https://zairzest.zairza.co.in/static/media/auth_bg.6f3fffecc27bb1aef6e1.webp");
+        height: 100vh;
+        width: 65%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .regis_left h1 {
+        font-size: 60px;
+        color: white;
+        padding-bottom: 3rem;
+      }
+      .regis_left p {
+        font-size: 16px;
+        font-weight: 580;
+        color: white;
+        padding-right: 10rem;
+        margin-bottom: 6rem;
+      }
+      .regis_right {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+      }
+      .regis_right h1 {
+        font-size: 32px;
+        color: rgb(62, 210, 247);
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 0.7rem;
+      }
+      .regis_right p {
+        font-size: 17px;
+        font-weight: 700;
+        display: flex;
+        padding-left: 1.2rem;
+        color: #858585;
+      }
+      .regis_filer {
+        padding: 12px;
+        margin: 12px;
+        width: 380px;
+        border-radius: 10px;
+        border: 1px solid #858585;
+        font-size: 16px;
+      }
+      .scan_img {
+        display: flex;
+        justify-content: center;
+      }
+      button {
+        height: 48px;
+        width: 110px;
+        border-radius: 10px;
+        background-color: #38ccff;
+        border: none;
+        font-size: 16px;
+        font-weight: 300;
+        color: #01265d;
+      }
+      .butt:hover {
+        background-color: #1699c5;
+      }
+      .sign_up_butt {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+      .log_in a {
+        color: #38ccff;
+      }
+      .Alr_reg p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-right: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .regis_containt {
+          flex-direction: column;
+        }
+        .regis_left {
+          width: 100%;
+          height: 50vh;
+        }
+        .regis_left h1 {
+          font-size: 40px;
+          padding-bottom: 1rem;
+        }
+        .regis_left p {
+          padding-right: 0;
+          margin-bottom: 2rem;
+          font-size: 14px;
+        }
+        .regis_right {
+          padding-left: 0;
+          align-items: center;
+        }
+        .regis_right h1 {
+          font-size: 24px;
+        }
+        .regis_filer {
+          width: 300px;
+        }
+      }
+      @media (max-width: 480px) {
+        .regis_left {
+          height: 40vh;
+        }
+        .regis_left h1 {
+          font-size: 30px;
+        }
+        .regis_left p {
+          font-size: 12px;
+          margin-bottom: 1rem;
+        }
+        .regis_right h1 {
+          font-size: 20px;
+        }
+        .regis_filer {
+          width: 250px;
+          padding: 8px;
+          margin: 8px;
+        }
+        button {
+          height: 40px;
+          width: 90px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="regis_containt">
+      <div class="regis_left">
+        <h1>
+          Enter the untamed <br />wilderness with <br />
+          ZAIRZA
+        </h1>
+        <p>
+          Release all your stress with the exciting Tech and <br />
+          Fun events in the most awaited fest . Zairzest 4.0 <br />
+          presented by Zairza.
+        </p>
+      </div>
+      <div class="regis_right">
+        <h1>
+          Become the Beast of the <br />
+          Cyber Forest
+        </h1>
+        <p>Sign up to get into Zairzest</p>
+        <input type="text" placeholder="Name" class="regis_filer" />
+        <input
+          type="text"
+          placeholder="Registration Number"
+          class="regis_filer"
+        />
+        <input type="email" placeholder="Email here" class="regis_filer" />
+        <input
+          type="password"
+          placeholder="Creat Your Own Password"
+          class="regis_filer"
+        />
+        <div class="scan_img">
+          <img
+            src="	https://zairzest.zairza.co.in/static/media/Payment69.907746c05fac2b72b6aa.png"
+            alt="QR"
+            height="150px"
+          />
+        </div>
+        <div class="sign_up_butt">
+          <button type="submit" class="butt">sign up</button>
+        </div>
+        <br />
+        <p class="Alr_reg">
+          Already registered ?<span class="log_in"
+            ><a href="sign_in.html">Login</a></span
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

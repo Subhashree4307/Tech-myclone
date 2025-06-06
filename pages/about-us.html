@@ -16,9 +16,10 @@ html {
 }
 
 body {
-  font-family: var(--font-secondary);
+  font-family: Outfit, sans-serif;
+  font-weight: 400;
   background-color: #111111;
-  color: var(--text-primary);
+  /* color: var(--text-primary); */
   overflow-x: hidden;
   line-height: 1.6;
 }
@@ -28,7 +29,56 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-
+.about_us_con {
+    padding: 20px;
+    max-width: 1200px; 
+   
+    color: rgb(195, 195, 195); 
+    background-color: #111111; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.innova h1 {
+    color: rgb(255, 255, 255);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 47px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+.about_us_con p h4 {
+    color:rgb(195, 195, 195);
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.about_us_con p:last-of-type h4 {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+    color: rgb(195, 195, 195); 
+}
+.photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; 
+}
 /* Navigation */
 .cyber-nav {
   position: fixed;
@@ -193,7 +243,113 @@ body {
 .mobile-menu-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+  /* about us page styling  */
+/* footer part styling  */
+.footer {
+  color: white;
+  width: 100%;
+  /* padding: 60px 0; */
+}
 
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+}
+.info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-content {
+ margin: 37px;
+  text-align: left;
+}
+.footer-contact h2 {
+  font-size: 40px;
+}
+.footer-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.footer-contact {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+
+.footer-address {
+  margin-bottom: 0.25rem;
+}
+
+.footer-phone {
+  margin-top: 0.25rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 25rem;
+}
+
+.social-icon {
+  background-color: #35b6e7;
+  border-radius: 50%;
+  padding: 0.75rem;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+  opacity: 0.9;
+}
+
+.presented-by {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  margin-left: 3rem;
+}
+
+.logo-container {
+  background-color: white;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  /* overflow: hidden; */
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+/* footer part style ending here */ */
 
     </style>
 </head>
@@ -224,6 +380,81 @@ body {
         </div>
       </div>
     </nav>
+
+    <!-- about us page content -->
+     <section>
+     <div class="about_us_con" >
+            <div class="innova"><h1 class="animate-h1" >Zairza: Igniting Innovation</h1></div>
+            <p>
+            <h4 class="animate-h4">Zairza, more than just a club, is a vibrant community of tech enthusiasts at Odisha University of
+                Technologyand Research. Rooted in our motto, "Wonder, Think, Create," we've been pushing the boundaries
+                of innovationin Robotics, Software, and Design since 2005. Officially recognized as a central club in
+                2007, Zairza hasconsistently achieved excellence, earning numerous accolades</h4>
+            </p><br>
+            <p>
+            <h4 class="animate-h4">Our mission is to empower students with the skills and knowledge needed to excel in their careers.
+                Regularworkshops and sessions provide a strong foundation, while industry internships offer invaluable
+                real-worldexperience. Strategically located in the SAC area, we're easily accessible to all students.
+                </h4>
+                </p><br>
+                <p>
+                <h4 class="animate-h4">Beyond academic pursuits, Zairza organizes the annual Zairzest technical fest. This three-day
+                    extravaganza features exciting competitions, workshops, and hackathons. Zairzest 3.0 was a
+                    resounding success, attracting hundreds of participants and showcasing the incredible talent of our
+                    members.</h4>
+                    </p><br>
+                    <p>
+                    <h4>Join Zairza and be part of a legacy of innovation. Together, we'll shape the future of
+                        technology.</h4>
+                        </p><br>
+        </div>
+        <div class="photo">
+            <img src="https://zairzest.zairza.co.in/static/media/frame-1.73cf465271f43437610e.png"  alt="image">
+            <img src="https://zairzest.zairza.co.in/static/media/frame-2.ce973fa3289e91663090.png"  alt="image">
+            <img src="https://zairzest.zairza.co.in/static/media/frame-3.c6b11f4c05d88c7800c9.png"  alt="image">
+            <img src="https://zairzest.zairza.co.in/static/media/frame-4.ca6f19f9780d333df5ea.png"  alt="image">
+            
+        </div><br><br><br>
+
+        <!-- about us page content ends here -->
+</section>
+ <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <h2 class="footer-title">Want to Know<br>about us?</h2>
+          <div class="info">
+             <p class="footer-description">
+            Come and know more about Zairza and join our community to <br>
+            experience such more amazing stuffs.
+          </p>
+            <div class="social-icons">
+          <a href="#" class="social-icon twitter-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+          </a>
+          <a href="#" class="social-icon mail-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          </a>
+          <a href="#" class="social-icon instagram-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-icon github-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+          </a>
+          </div>
+        </div>
+          <div class="footer-contact">
+            <p class="footer-address">OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha. <br>+91 7205883336 </p>
+            <div class="presented-by">
+          <span>Presented by</span>
+          <div class="logo-container">
+            <img src="	https://zairzest.zairza.co.in/static/media/zairza-logo.82f594276ad1ac910aab.webp" alt="Zairza Logo" class="logo-img" id="zairza-logo">
+          </div>
+        </div> 
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script>document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded');
 
