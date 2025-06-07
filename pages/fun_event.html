@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Event</title>
+    <link rel="stylesheet" href="styletech.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: #111111;
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation */
+.cyber-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: black;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  transition: var(--transition);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-text {
+  font-family: "Sen", sans-serif;
+  font-size: 40px;
+  margin-left: 21px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: white;
+}
+@media screen and (min-width: 1440px) {
+  .nav-container {
+    margin-left: 20px;
+    margin-right: auto;
+  }
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-right: 0rem;
+  margin-left: 6rem;
+  gap: 3rem;
+  padding: 32px;
+}
+.nav-toggle {
+  display: none;
+}
+.nav-links a:hover {
+  color: #38ccff;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: var(--transition);
+}
+.footer {
+  color: white;
+  width: 100%;
+  /* padding: 60px 0; */
+}
+
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+}
+.info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-content {
+ margin: 37px;
+  text-align: left;
+}
+.footer-contact h2 {
+  font-size: 40px;
+}
+.footer-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.footer-contact {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+
+.footer-address {
+  margin-bottom: 0.25rem;
+}
+
+.footer-phone {
+  margin-top: 0.25rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 25rem;
+}
+
+.social-icon {
+  background-color: #35b6e7;
+  border-radius: 50%;
+  padding: 0.75rem;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+  opacity: 0.9;
+}
+
+.presented-by {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  margin-left: 3rem;
+}
+
+.logo-container {
+  background-color: white;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  /* overflow: hidden; */
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+ .card {
+    width: 300px; 
+    height: 460px;
+    perspective: 1000px;
+    margin: 20px;
+    vertical-align: top;
+    display: inline-block; 
+    vertical-align: top; 
+    position: relative;
+    overflow: hidden;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; 
+    transition: transform 0.6s ease-in-out; 
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg); 
+}
+
+.tech-container, .back-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    display: flex; 
+    flex-direction: column; 
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+    align-items: center; 
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 0; 
+    box-sizing: border-box;
+    color: white; 
+    overflow: hidden;
+}
+
+.tech-container {
+    transform: rotateY(0deg);
+    padding-top: 0; /* Adjust as needed, image will take up space */
+}
+
+.back-container {
+    transform: rotateY(180deg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, .928) 4%, #0564aa);
+    color:white;
+    text-align: center;
+    padding: 20px; 
+    justify-content: space-between; 
+}
+
+.back-container p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.close-btn {
+    background-color: #38ccff; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: auto; 
+}
+
+.close-btn:hover {
+    background-color: #38ccff;
+}
+
+
+.tech-container {
+    background-color: #1a1a1a;
+    
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slide-in 1s forwards;
+    animation-delay: var(--delay,0s);
+   
+}
+
+
+
+.tech-events {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px;
+    padding: 20px; 
+}
+
+
+.image-wrapper {
+    position: relative;
+    width: 100%; 
+    height: auto; 
+    overflow: hidden; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; 
+}
+
+.tech-container img {
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: cover; 
+    transition: transform 0.4s ease;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; 
+}
+
+.tech-container:hover img {
+    transform: scale(1.05);
+}
+
+.info-button {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background-color: white;
+    border: none;
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10; 
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color:white;
+}
+
+.info-button i {
+    color:#1095ca; 
+    font-size: 16px; /* Icon size */
+}
+
+.card-content {
+    width: 100%;
+    padding: 15px 20px; /* Padding for text content */
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left */
+}
+
+.card-content h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2em; /* Adjust font size as needed */
+    color: white;
+}
+
+.event-details {
+    margin-top: 5px; /* Space below heading */
+    font-size: 0.9em; /* Smaller font for details */
+    color: #bbb; /* Lighter grey for details */
+}
+
+.event-details p {
+    margin: 0; /* Remove default paragraph margin */
+    line-height: 1.4;
+}
+
+/* --- Your existing animation and delay CSS --- */
+@keyframes slide-in {
+ to{
+   opacity: 1;
+   transform: translateY(0);
+ }
+}
+
+.card:nth-child(1){
+ --delay:0.2s;
+}
+.card:nth-child(2){
+ --delay:0.4s;
+}
+.card:nth-child(3){
+ --delay:0.6s;
+}
+.card:nth-child(4){
+ --delay:0.8s;
+}
+.card:nth-child(5){
+ --delay:1.0s;
+}
+.card:nth-child(6){
+ --delay:1.2s;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+
+    top: 70px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+  }
+ 
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .tech-events {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 250px;
+    height: 420px;
+  }
+
+  .card-content h3 {
+    font-size: 1em;
+  }
+
+  .event-details {
+    font-size: 0.85em;
+  }
+
+  .info-button {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .close-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-container,
+  .hero-content,
+  .container {
+    padding: 0 16px;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+  .footer-container {
+    flex-direction: column; /* 🔄 Stack items vertically */
+    align-items: center;     /* 🔄 Center content */
+    text-align: center;
+  }
+
+  .info {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .footer-content {
+    margin: 20px 0;       
+    text-align: center;
+  }
+
+  .footer-contact {
+    flex-direction: column; 
+    align-items: center;
+    padding-bottom: 2rem;  
+  }
+
+  .social-icons {
+    padding-left: 0;        
+    justify-content: center;
+    flex-wrap: wrap;       
+  }
+
+  .social-icon {
+    height: 40px;           
+    width: 40px;
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .nav-container {
+    height: 70px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+   .footer-section {
+    padding: 60px 0 30px;
+  }
+  .footer-title {
+    font-size: 2rem;        
+  }
+
+  .footer-description {
+    font-size: 1rem;       
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-contact h2 {
+    font-size: 1.5rem;      
+  }
+
+  .presented-by {
+    flex-direction: column; 
+    gap: 0.5rem;
+  }
+
+  .logo-container {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .logo-img {
+    width: 30px;
+    height: 30px;
+  }
+  .tech-events {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .card {
+    width: 90%;
+    height: 400px;
+  }
+
+  .card-content {
+    padding: 12px 16px;
+  }
+
+  .card-content h3 {
+    font-size: 1em;
+  }
+
+  .event-details {
+    font-size: 0.8em;
+  }
+
+  .info-button {
+    width: 26px;
+    height: 26px;
+  }
+
+  .close-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+.nav-links.mobile-open {
+  display: flex;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  padding: 40px 20px;
+  gap: 24px;
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+  z-index: 1000;
+  margin-right: 0;
+}
+.nav-links.mobile-open > div {
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.nav-links.mobile-open > div:last-child {
+  border-bottom: none;
+}
+
+.nav-links.mobile-open a {
+  color: white !important;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+    </style>
+</head>
+<body>  
+    <div class="main-container">
+       <div>
+      <!-- New Header Section -->
+     <nav class="cyber-nav" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text"
+            >ZAIRZEST
+            <span
+              class="logo-version"
+              style="color: #38ccff; font-family: 'Mohave', sans-serif"
+              >4.0</span
+            ></span
+          >
+        </div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="pages/about-us.html" class="hover-link">About us</a>
+          <a href="pages/register.html" class="hover-link">Register</a>
+          <a href="pages/sign_in.html" class="hover-link">Sign in</a>
+        </div>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  
+   <div class="tech-main" style="padding-top: 7rem;">
+            <div class="tech-head" style="color: white; font-size: 25px;">
+                <h1> <center>Fun Events</center><h1>
+            </div>
+            <div class="tech-events" >
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="tech-container">
+                            <div class="image-wrapper">
+                                <img src="	https://zairzest.zairza.co.in/static/media/Treasure.10c34a1eb41ea294f218.webp" alt="img"/>
+                                <button class="info-button"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="card-content">
+                                <h3>Treasure Hunt</h3>
+                                <div class="event-details">
+                                    <p>Date & Time</p>
+                                    <p>Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back-container">
+                            <div><p>Treasure Hunt is a thrilling, tech-themed competition where teams of 8 solve riddles and tech-related puzzles to uncover clues leading to the next location. Racing against other teams, participants must think fast and work together to reach the final surprise destination. The team that arrives first wins the prize.
+                            </p></div>
+                            <div class="card-outer">
+                                <button class="close-btn">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="tech-container">
+                            <div class="image-wrapper">
+                                <img src="https://zairzest.zairza.co.in/static/media/Jamming.b66e5899b482b838979d.webp" alt="img"/>
+                                <button class="info-button"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="card-content">
+                                <h3>Jamming Night</h3>
+                                <div class="event-details">
+                                    <p>Date & Time</p>
+                                    <p>Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back-container">
+                            <div><p>Groove to the Beat at Dance Night! Join us for an electrifying evening of live music and dance, where enthusiasts of all styles can showcase their moves and connect with fellow dancers. Bring your friends and dance the night away!
+                            </p></div>
+                            <div class="card-outer">
+                                <button class="close-btn">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="tech-container">
+                            <div class="image-wrapper">
+                                <img src="https://zairzest.zairza.co.in/static/media/Paper.97adf6cf5b174ec0c6df.webp" alt="img"/>
+                                <button class="info-button"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="card-content">
+                                <h3>Paper Dance</h3>
+                                <div class="event-details">
+                                    <p>Date & Time</p>
+                                    <p>Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back-container">
+                            <div><p>Paper Dance is an engaging event where participants pair up to test their balance and teamwork. The challenge involves dancing on a piece of paper that folds with each step. The winning pairs are those who can stay on the paper until the final fold. This thrilling competition combines grace, balance, and collaboration, making it a fun and interactive experience for everyone involved.
+                            </p></div>
+                            <div class="card-outer">
+                                <button class="close-btn">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="tech-container">
+                            <div class="image-wrapper">
+                                <img src="	https://zairzest.zairza.co.in/static/media/Twister.e79f4261e44c53ba9afd.webp" alt="img"/>
+                                <button class="info-button"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="card-content">
+                                <h3>Twister</h3>
+                                <div class="event-details">
+                                    <p>Date & Time</p>
+                                    <p>Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back-container">
+                            <div><p>Twister is a fun game where players place hands and feet on colors chosen by a spinner. As they twist into awkward positions to avoid overlapping, anyone who falls or touches the mat with an elbow or knee is out. Get ready for unpredictable fun!
+                            </p></div>
+                            <div class="card-outer">
+                                <button class="close-btn">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="tech-container">
+                            <div class="image-wrapper">
+                                <img src="	https://zairzest.zairza.co.in/static/media/PVP.23e22d02f97d681710ac.webp" alt="img"/>
+                                <button class="info-button"><i class="fas fa-info-circle"></i></button>
+                            </div>
+                            <div class="card-content">
+                                <h3>PVP Gaming</h3>
+                                <div class="event-details">
+                                    <p>Date & Time</p>
+                                    <p>Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back-container">
+                            <div><p>PVP Gaming is an exciting one-on-one competition where players choose from a diverse roster of iconic characters with unique abilities. Matches will test skills and reflexes, with winners determined in a knockout format based on the best of three matches. Showcase your talents and aim to be crowned the ultimate champion!
+                                will take home the prize.
+                            </p></div>
+                            <div class="card-outer">
+                                <button class="close-btn">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div><br><br><br><br>
+  <!-- Your New Footer Section -->
+     <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <h2 class="footer-title">Want to Know<br>about us?</h2>
+          <div class="info">
+             <p class="footer-description">
+            Come and know more about Zairza and join our community to <br>
+            experience such more amazing stuffs.
+          </p>
+            <div class="social-icons">
+          <a href="#" class="social-icon twitter-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+          </a>
+          <a href="#" class="social-icon mail-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          </a>
+          <a href="#" class="social-icon instagram-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-icon github-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+          </a>
+          </div>
+        </div>
+          <div class="footer-contact">
+            <p class="footer-address">OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha. <br>+91 7205883336 </p>
+            <div class="presented-by">
+          <span>Presented by</span>
+          <div class="logo-container">
+            <img src="	https://zairzest.zairza.co.in/static/media/zairza-logo.82f594276ad1ac910aab.webp" alt="Zairza Logo" class="logo-img" id="zairza-logo">
+          </div>
+        </div> 
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div>
+      <script>document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded');
+
+    // Get elements
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    console.log('Toggle element:', mobileMenuToggle);
+    console.log('Nav links element:', navLinks);
+
+    if (!mobileMenuToggle || !navLinks) {
+        console.error('Elements not found!');
+        return;
+    }
+
+    // Toggle mobile menu
+    mobileMenuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Hamburger clicked');
+
+        // Toggle classes
+        mobileMenuToggle.classList.toggle('active');
+        navLinks.classList.toggle('mobile-open');
+
+        console.log('Active class:', mobileMenuToggle.classList.contains('active'));
+        console.log('Mobile-open class:', navLinks.classList.contains('mobile-open'));
+    });
+
+    // Close menu when clicking on links
+    navLinks.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            console.log('Link clicked, closing menu');
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-open');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-open');
+        }
+    });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const infoButtons = document.querySelectorAll('.info-button');
+    const closeButtons = document.querySelectorAll('.close-btn');
+
+    infoButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.card');
+            card.classList.add('flipped');
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const card = button.closest('.card');
+            card.classList.remove('flipped');
+        });
+    });
+});
+</script>
+</body>
+</html>
