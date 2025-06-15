@@ -4,7 +4,7 @@ Track your progress as you build backend skills step by step!
 
 ## 🔰 Beginner Projects
 
-- [ ] 1. Hello World API
+- [x ] 1. Hello World API
 - [ ] 2. Notes App (CRUD)
 - [ ] 3. To-Do List API
 - [ ] 4. Book Library Management
